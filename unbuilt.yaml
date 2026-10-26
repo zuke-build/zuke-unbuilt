@@ -1,0 +1,60 @@
+unbuilt: 1
+name: zuke
+origin: extracted-from-public-implementation
+reference_impl: https://github.com/zuke-build/zuke
+interview: author
+modules:
+  - id: GRAPH
+    path: modules/build-model
+    maturity: shipped
+  - id: WRAP
+    path: modules/tool-wrappers
+    maturity: shipped
+  - id: CACHE
+    path: modules/caching
+    maturity: shipped
+  - id: DURABLE
+    path: modules/durable-runs
+    maturity: shipped
+  - id: CIGEN
+    path: modules/ci-generation
+    maturity: shipped
+  - id: BOOT
+    path: modules/bootstrap
+    maturity: shipped
+  - id: AGENT
+    path: modules/agent-surface
+    maturity: shipped
+  - id: AIREV
+    path: modules/ai-review
+    maturity: shipped
+  - id: DELIVER
+    path: modules/release-ops
+    maturity: partial
+license: MIT
+has_ui: false
+original_effort: XL
+implementation_terms: "Build and share your version freely under any license. No endorsement by the original project is implied."
+platforms:
+  - linux
+  - macos
+  - windows
+summary: "A code-first, strongly typed build automation system: builds are classes, targets are typed members, and every external tool is a typed wrapper."
+original_stack:
+  - typescript
+  - deno
+  - jsr
+substitutions:
+  - host-runtime
+  - remote-cache-backend
+  - state-backend
+  - ci-provider
+  - agent-protocol
+  - identity-provider
+  - agent-harness
+  - build-registry-host
+  - model-provider
+  - code-host
+  - traffic-router
+  - metric-backend
+  - telemetry-collector
